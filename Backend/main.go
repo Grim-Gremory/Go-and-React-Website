@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
 )
 
@@ -18,6 +19,11 @@ func main() {
 	}
 	port := os.Getenv("PORT")
 	app := fiber.New()
+	// CORS Middleware
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "http://localhost:3001", // or "*" for all origins
+		AllowMethods: "GET,POST,HEAD,PUT,DELETE,PATCH,OPTIONS",
+	}))
 	routes.Setup(app)
 	app.Listen(":" + port)
 }
