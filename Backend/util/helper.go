@@ -8,14 +8,13 @@ import (
 
 const SecretKey = "secret"
 
+// Creates JWT Token
 func GenerateJwt(issuer string) (string, error) {
-
-	claims := jwt.NewWithClaims(jwt.SigningMethodES256, jwt.StandardClaims{
+	claims := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.StandardClaims{
 		Issuer:    issuer,
 		ExpiresAt: time.Now().Add(time.Hour * 24).Unix(),
 	})
 	return claims.SignedString([]byte(SecretKey))
-
 }
 
 func Parsejwt(cookie string) (string, error) {
