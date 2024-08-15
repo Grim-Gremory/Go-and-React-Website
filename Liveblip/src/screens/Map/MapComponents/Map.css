@@ -26,7 +26,7 @@
 }
  
 table {
-    border: 2px solid forestgreen;
+    border: 2px solid rgb(0, 0, 0);
     width:  100%;
     height: 200px;
 }
