@@ -105,6 +105,7 @@ func Login(c *fiber.Ctx) error {
 		HTTPOnly: true,
 	}
 	c.Cookie(&cookie)
+	c.Status(200)
 	return c.JSON(fiber.Map{
 		"message": "you have successfully login",
 		"user":    user,

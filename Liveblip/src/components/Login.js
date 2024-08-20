@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const Login = ({ loggedIn }) => {
+const Login = ({ loggedIn , setActivePage, setActiveHome}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -10,13 +10,20 @@ const Login = ({ loggedIn }) => {
         //Login authentication logic
 
         // to do go backend post.
-        axios.get("url")//post
+        axios.post("http://localhost:3000/api/login", {
+            password: password,           // Ensure `password` is set correctly
+            email: email,                 // Ensure `email` is set correctly
+        })
             .then(res => {
                 if (res.status === 200) {
                     loggedIn(true)
+                    setActivePage(3)
+                    setActiveHome(0)
                 }
             })
-            .catch(err => console.log(err));
+            .catch((err) => {
+                console.error("Error during POST request:", err);
+            });
 
     };
 
