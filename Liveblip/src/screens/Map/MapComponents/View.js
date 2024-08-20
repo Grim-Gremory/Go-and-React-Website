@@ -82,7 +82,7 @@ export default function MapComponent() {
       <div>
         <div id="map" style={{ width: '100%', height: '400px' }}></div>
         <button id="zoom-out">Zoom out</button>
-        <button id="zoom-in">Zoom in</button>
+        <button id="zoom-in">Zoom in</button> 
       </div>
     );
   }

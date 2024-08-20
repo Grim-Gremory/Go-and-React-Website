@@ -7,7 +7,9 @@ import (
 )
 
 func Setup(app *fiber.App) {
-	println("API Hit")
+
 	app.Post("/api/register", controller.Register)
-	//appp.post, login logic, return 200 if match
+	//app.Use(middleware.IsAuthenticated())
+	app.Post("/api/login", controller.Login)
+	//app.post, login logic, return 200 if match
 }
