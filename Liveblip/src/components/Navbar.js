@@ -1,41 +1,43 @@
 import React from 'react'
 import "./Navbar.css"
+
 export default function Navbar({ setActive, loggedIn, setActiveHome }) {
     const ActiveNav = () => {
         if (loggedIn) {
             return (
-                <nav>
-                    <ul>
-                        <li>
-                            <span className="pointer" onClick={() => { setActiveHome(1); setActive(3) }}> Home </span>
-                        </li>
-
-                        <li>
-                            <span className="pointer" onClick={() => { setActive(0) }}> Login </span>
-                        </li>
-
-                        <li>
-                            <span className="pointer" onClick={() => { setActive(1) }}> Signup </span>
-                        </li>
-                    </ul>
-                </nav>
+                <div className='Nav'>
+                <img alt="decoration" src='/logo-light.png' />
+                <ul>
+                    <li>
+                        <span className="pointer" onClick={() => { setActiveHome(1); setActive(3) }}> Home </span>
+                    </li>
+                    <li>
+                        <span className="pointer" onClick={() => { setActive(0) }}> Login </span>
+                    </li>
+                    <li>
+                        <span className="pointer" onClick={() => { setActive(1) }}> Signup </span>
+                    </li>
+                </ul>
+            </div>
             )
         } else {
             return (
-                <nav>
-                    <ul>
-                        <li>
-                            <span className="pointer" onClick={() => { setActiveHome(1); setActive(3) }}> Home </span>
-                        </li>
-                        <li>
-                            <span className="pointer" onClick={() => { setActive(0) }}> Login </span>
-                        </li>
+                <div className='Nav'>
+                <img alt="decoration" src='/logo-light.png' />
+                <ul>
+                    <li>
+                        <span className="pointer" onClick={() => { setActiveHome(1); setActive(3) }}> Home </span>
+                    </li>
+                    <li>
+                        <span className="pointer" onClick={() => { setActive(0) }}> Login </span>
+                    </li>
+                    <li>
+                        <span className="pointer" onClick={() => { setActive(1) }}> Signup </span>
+                    </li>
+                </ul>
+            </div>
 
-                        <li>
-                            <span className="pointer" onClick={() => { setActive(1) }}> Signup </span>
-                        </li>
-                    </ul>
-                </nav>
+
             )
         }
     }

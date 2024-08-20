@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import LoggedInHandler from "./LoggedInHandler";
 
 function App() {
-  const [loggedIn, setLogin] = useState(true)
+  const [loggedIn, setLogin] = useState(false)
   const [active, setActive] = useState(0)
   const [activeHome, setActiveHome] = useState(0)
 
@@ -39,7 +39,7 @@ function App() {
         {/* <Navbar setActive={setActive} loggedIn={loggedIn}/> */}
 
         <GetCurrentPage />
-      
+
     </>
   );
 }
