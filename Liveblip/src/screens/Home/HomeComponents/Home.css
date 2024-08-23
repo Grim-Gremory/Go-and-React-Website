@@ -1,8 +1,6 @@
 .Home {
 
-    /* border: solid 3px; */
-    padding: 1em;
-
+padding-bottom: 100px;
 }
 
 .Home img{
@@ -13,21 +11,48 @@
 }
 
 .search {
-    padding-top: 15%;
-    display: flex;
+    padding-top: 10%;
+
     align-items: center;
     justify-content: center;
     height: 8em;
 
 
 }
-
-.searchbar{
+.searchbar {
     background-color: darkgrey;
     border-radius: 100px;
-    height: 90px;
-    width : 25%;
-    padding : 10px;
-    flex: 1;
+    height: 50px;
+    width: 25%;
+    padding: 0;
+    position: relative;
+    display: flex; /* Use flexbox for easy alignment */
+    align-items: center; /* Center items vertically */
 }
+
+.searchbar input {
+    background-color: transparent;
+    border: none;
+    outline: 0cap;
+    flex-grow: 1; /* Allow the input to take up available space */
+    padding-left: 15px; /* Add some padding for text inside the input */
+    height: 100%;
+}
+
+.searchbar button {
+    background-color: transparent;
+    border: none;
+    margin-right: 15px; /* Add some margin to the right of the button */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar button img{
+    height: 50px;
+    width: auto;
+}
+
+
 

@@ -6,20 +6,27 @@ export default function Home() {
     return (
         <div class="Home">
             <form class="search">
+
                 <img alt="decoration" src="/logo-dark.png" />
 
-                <input
-                    class="searchbar"
-                    type="text"
-                    placeholder="Enter The Device IMEI"
-                    value={imei}
-                    onChange={(e) => setImei(e.target.value)}
-                    required
-                />
-                <button class="search-button">
-                    <img alt="Search" src="/search.png" />
-                </button>
+                <div class="searchbar">
+
+                    <input
+                        type="text"
+                        placeholder="Enter The Device IMEI"
+                        value={imei}
+                        onChange={(e) => setImei(e.target.value)}
+                        required
+                    />
+                    <button class="search-button">
+                        <img alt="Search" src="/search.png" />
+                    </button>
+
+                </div>
+
             </form>
+
         </div>
+
     );
 }

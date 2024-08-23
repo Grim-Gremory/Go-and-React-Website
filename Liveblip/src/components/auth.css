@@ -1,0 +1,107 @@
+.Card{
+    margin-top: 1px;
+    margin-left: 35%;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    outline: 0cap;
+    border-radius: 5px;
+    background-color: rgba(31, 40, 160, 0.123);
+    backdrop-filter: blur(2px);
+}
+
+
+.Card input {
+    background-color: transparent;
+    border: none;
+    outline: 0cap;
+    flex-grow: 1; /* Allow the input to take up available space */
+    padding-left: 15px; /* Add some padding for text inside the input */
+    margin: 8px;
+    height: 10%;
+    width: 90%;
+}
+
+.Card button{
+    height: 35px;
+    width: 100px;
+    margin-top: 1%;
+    margin-left:41% ;
+    border-radius: 10px;
+    border: none;
+    outline: 0cap;
+    background-color: rgb(53, 162, 225);
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 300px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #ddd;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* White icons for dark background */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
