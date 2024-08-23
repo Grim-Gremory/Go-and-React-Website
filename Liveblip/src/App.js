@@ -11,19 +11,6 @@ function App() {
   const [active, setActive] = useState(0);
   const [activeHome, setActiveHome] = useState(0);
 
-
-  const SetNotLoggedActive = () => {
-    if (active === 0) {
-      return <Login loggedIn={setLogin}/>
-    } else if (active === 1) {
-      return <Signup setActivePage={setActive} />
-    }
-
-     if(activeHome === 1) {
-      return <Home/>
-    }
-  }
-
   const GetCurrentPage = () => {
     if (loggedIn) {
       return <LoggedInHandler active={activeHome} />;
@@ -43,9 +30,9 @@ function App() {
     <div class="App">
       <Navbar setActive={setActive} loggedIn={loggedIn} setActiveHome={setActiveHome} />
 
-      <GetCurrentPage />
+        <GetCurrentPage />
 
-    </div>
+    </>
   );
 }
 
