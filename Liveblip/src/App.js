@@ -44,7 +44,7 @@ function App() {
       <Navbar setActive={setActive} loggedIn={loggedIn} setActiveHome={setActiveHome} />
 
       <GetCurrentPage />
-      
+
     </div>
   );
 }
