@@ -30,9 +30,9 @@ function App() {
     <div class="App">
       <Navbar setActive={setActive} loggedIn={loggedIn} setActiveHome={setActiveHome} />
 
-        <GetCurrentPage />
+      <GetCurrentPage />
 
-    </>
+    </div>
   );
 }
 
