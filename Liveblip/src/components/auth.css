@@ -17,7 +17,7 @@
 
 
 .Card input {
-    background-color: transparent;
+    background-color: rgba(31, 40, 160, 0.123);
     border: none;
     outline: 0cap;
     flex-grow: 1; /* Allow the input to take up available space */
@@ -38,3 +38,17 @@
     background-color: rgb(53, 162, 225);
 }
 
+.loading-icon {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto; /* Center the loading icon */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

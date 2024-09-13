@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import LoggedInHandler from "./LoggedInHandler";
 
 function App() {
-  const [loggedIn, setLogin] = useState(false);
+  const [loggedIn, setLogin] = useState(true);
   const [active, setActive] = useState(0);
   const [activeHome, setActiveHome] = useState(0);
 

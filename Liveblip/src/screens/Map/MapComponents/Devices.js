@@ -1,7 +1,19 @@
-import React from 'react'
+import React from 'react';
+import "./Devices.css";
+
+// Example function to simulate adding a marker to the map
+// Replace this function with actual map marker logic
+const addMarkerToMap = (deviceName) => {
+  console.log(`Adding marker for ${deviceName} to the map`);
+  // Your map's marker-adding logic goes here
+};
+
 export default function Devices() {
   const [open, setOpen] = React.useState(true);
   const [opens, setOpenSettings] = React.useState(true);
+
+  // List of device names (this can come from props or an API call)
+  const devices = ["Device 1", "Device 2", "Device 3", "Device 4"];
 
   const handleClick = () => {
     setOpen(!open);
@@ -10,57 +22,28 @@ export default function Devices() {
     setOpenSettings(!opens);
   };
 
+  // Function to handle the device button click
+  const handleDeviceClick = (deviceName) => {
+    // Add marker to the map for the clicked device
+    addMarkerToMap(deviceName);
+  };
+
   return (
-    // <List
-    //   sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-    //   component="nav"
-    //   aria-labelledby="nested-list-subheader"
-    //   subheader={
-    //     <ListSubheader component="div" id="nested-list-subheader">
-    //       Nested List Items
-    //     </ListSubheader>
-    //   }
-    // >
-
-    //   <ListItemButton onClick={handleClick}>
-    //     <ListItemIcon>
-    //       <InboxIcon />
-    //     </ListItemIcon>
-    //     <ListItemText primary="Inbox" />
-    //     {open ? <ExpandLess /> : <ExpandMore />}
-    //   </ListItemButton>
-
-    //   <Collapse in={open} timeout="auto" unmountOnExit>
-    //     <List component="div" disablePadding>
-    //       <ListItemButton sx={{ pl: 4 }}>
-    //         <ListItemIcon>
-    //           <StarBorder />
-    //         </ListItemIcon>
-    //         <ListItemText primary="Starred" />
-    //       </ListItemButton>
-    //     </List>
-    //   </Collapse>
-
-    //   <ListItemButton onClick={handleClickSettings}>
-    //     <ListItemIcon>
-    //       <InboxIcon />
-    //     </ListItemIcon>
-    //     <ListItemText primary="Settings" />
-    //     {opens ? <ExpandLess /> : <ExpandMore />}
-    //   </ListItemButton>
-
-    //   <Collapse in={opens} timeout="auto" unmountOnExit>
-    //     <List component="div" disablePadding>
-    //       <ListItemButton sx={{ pl: 4 }}>
-    //         <ListItemIcon>
-    //           <SettingsIcon />
-    //         </ListItemIcon>
-    //         <ListItemText primary="Starred" />
-    //       </ListItemButton>
-    //     </List>
-    //   </Collapse>
-
-    // </List>
-    <div>hi</div>
+    <div className="devices-container">
+      <div className="devices-card">
+        <h3>Devices</h3>
+        <div className="device-list">
+          {devices.map((device, index) => (
+            <button
+              key={index}
+              className="device-button"
+              onClick={() => handleDeviceClick(device)}
+            >
+              {device}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
